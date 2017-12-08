@@ -158,6 +158,7 @@ public class ComBuild implements Plugin<Project> {
                     System.out.println("add dependencies : " + str + "-release@aar");
                 } else {
                     throw new RuntimeException(str + " not found ! maybe you should generate a new one ")
+                    //project.dependencies.add("compile",str+"@aar")
                 }
             } else {
                 project.dependencies.add("compile", project.project(':' + str))
